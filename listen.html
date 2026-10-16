@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>हिंदी ऑडियोबुक · Hindi audiobook — American History &amp; Society</title>
+<meta name="description" content="American History & Society — the background guide as a Hindi (Hinglish) audiobook, told as stories.">
+<link rel="icon" href="audio/cover.jpg">
+<link rel="apple-touch-icon" href="audio/cover.jpg">
+<style>
+:root{color-scheme:light;--wk-serif:'Linux Libertine','Georgia','Times',serif;--wk-sans:sans-serif;--wk-bg:#fff;--wk-page:#f8f9fa;--wk-text:#202122;--wk-muted:#54595d;--wk-link:#36c;--wk-border:#a2a9b1;--wk-border-subtle:#c8ccd1;--wk-sep:#eaecf0;--wk-surface:#f8f9fa;--wk-surface2:#eaecf0;--wk-success:#14866d;--wk-cur:#eaf3ff}
+[data-theme="dark"]{color-scheme:dark;--wk-bg:#101418;--wk-page:#0b0d10;--wk-text:#eaecf0;--wk-muted:#a2a9b1;--wk-link:#88a3e8;--wk-border:#72777d;--wk-border-subtle:#54595d;--wk-sep:#2a2d31;--wk-surface:#1b1e22;--wk-surface2:#27292d;--wk-success:#3ea58a;--wk-cur:#1c2738}
+*{box-sizing:border-box}
+html{font-size:16px}
+body{margin:0;background:var(--wk-page);color:var(--wk-text);font-family:var(--wk-sans);line-height:1.6}
+a{color:var(--wk-link);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--wk-link);outline-offset:1px}
+.hi,.now-hi,[lang="hi"]{font-family:'Kohinoor Devanagari','Nirmala UI','Noto Sans Devanagari','Mangal',sans-serif}
+
+.wk-header{display:flex;align-items:center;justify-content:space-between;gap:.5rem 1.5rem;flex-wrap:wrap;max-width:60rem;margin:0 auto;padding:.4rem 1rem;background:var(--wk-bg);border-bottom:1px solid var(--wk-sep)}
+.wk-brand{display:flex;align-items:center;gap:.6rem;color:var(--wk-text)}
+.wk-brand:hover{text-decoration:none}
+.wk-logo{width:2.6rem;height:2.6rem;flex:none}
+.wk-g1{stop-color:var(--wk-bg)}.wk-g2{stop-color:var(--wk-border-subtle)}
+.wk-gl{fill:none;stroke:var(--wk-muted);stroke-width:1.1}
+.wk-word{display:flex;flex-direction:column;line-height:1.12}
+.wk-name{font-family:var(--wk-serif);font-size:1.32rem;font-variant:small-caps;letter-spacing:.07em}
+.wk-motto{font-family:var(--wk-serif);font-size:.74rem;letter-spacing:.02em}
+.back{font-size:.9rem}
+
+.page{max-width:60rem;margin:0 auto;padding:0 1rem 3rem;background:var(--wk-bg);border:1px solid var(--wk-sep);border-top:0}
+h1{margin:0;padding:1rem 0 .15rem;border-bottom:1px solid var(--wk-border);font-family:var(--wk-serif);font-size:1.8rem;font-weight:normal;line-height:1.3}
+h1 .en{font-size:1.1rem;color:var(--wk-muted)}
+h2{margin:1.6rem 0 .5rem;padding-bottom:.15rem;border-bottom:1px solid var(--wk-border);font-family:var(--wk-serif);font-size:1.45rem;font-weight:normal}
+.from{margin:.45rem 0 1rem;color:var(--wk-muted);font-size:.85rem}
+
+.player{position:sticky;top:0;z-index:20;margin:0 -1rem;padding:.6rem 1rem .5rem;background:var(--wk-bg);border-bottom:1px solid var(--wk-border-subtle);box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.now{display:flex;align-items:center;gap:.75rem}
+.now img{width:3.4rem;height:3.4rem;border:1px solid var(--wk-border-subtle);border-radius:2px;flex:none}
+.now-txt{min-width:0}
+.now-lbl{font-size:.72rem;color:var(--wk-muted);text-transform:uppercase;letter-spacing:.06em}
+.now-hi{font-size:1.05rem;font-weight:600;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.now-en{font-size:.82rem;color:var(--wk-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+audio{display:block;width:100%;height:2.5rem;margin:.45rem 0 .3rem}
+.ctrls{display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center}
+.btn{min-width:2.9rem;min-height:2.4rem;padding:.3rem .75rem;border:1px solid var(--wk-border);border-radius:2px;background:var(--wk-surface);color:var(--wk-text);font:inherit;font-size:.9rem;cursor:pointer}
+.btn:hover{background:var(--wk-bg);border-color:var(--wk-link)}
+.btn.main{min-width:7rem;background:var(--wk-link);border-color:var(--wk-link);color:#fff;font-weight:bold}
+[data-theme="dark"] .btn.main{color:#101418}
+
+.opts{display:flex;flex-wrap:wrap;gap:.6rem 2rem;margin:.8rem 0 .2rem;font-size:.875rem}
+.opt{display:flex;flex-wrap:wrap;align-items:center;gap:.3rem}
+.opt b{margin-right:.2rem;font-size:.8rem}
+.chip{padding:.15rem .55rem;border:1px solid var(--wk-border-subtle);border-radius:1rem;background:var(--wk-bg);color:var(--wk-link);font:inherit;font-size:.82rem;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--wk-link);border-color:var(--wk-link);color:#fff;font-weight:bold}
+[data-theme="dark"] .chip[aria-pressed="true"]{color:#101418}
+.note{margin:.6rem 0 0;padding:.45rem .7rem;border-left:3px solid var(--wk-link);background:var(--wk-surface);font-size:.85rem}
+.note:empty{display:none}
+
+.prog{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.3rem 1rem;font-size:.85rem;color:var(--wk-muted)}
+.prog button{border:0;background:none;color:var(--wk-link);font:inherit;cursor:pointer;padding:0}
+ol.chs{list-style:none;margin:.4rem 0 0;padding:0}
+.ch{display:grid;grid-template-columns:2.6rem minmax(0,1fr) auto;gap:.2rem .7rem;align-items:start;padding:.55rem .4rem;border-bottom:1px solid var(--wk-sep)}
+.ch.cur{background:var(--wk-cur)}
+.ch .pb{width:2.4rem;height:2.4rem;border:1px solid var(--wk-border);border-radius:50%;background:var(--wk-bg);color:var(--wk-link);font-size:.85rem;cursor:pointer}
+.ch.cur .pb{background:var(--wk-link);border-color:var(--wk-link);color:#fff}
+.ch .num{color:var(--wk-muted);font-size:.85em;margin-right:.25rem}
+.ch .hi{font-size:1rem;line-height:1.4}
+.ch .en{font-size:.83rem;color:var(--wk-muted)}
+.ch .r{text-align:right;font-size:.82rem;color:var(--wk-muted);white-space:nowrap;padding-top:.15rem}
+.ch .tick{display:block;color:var(--wk-success);font-weight:bold;min-height:1.2em}
+.ch details{margin-top:.15rem;font-size:.85rem}
+.ch summary{cursor:pointer;color:var(--wk-link);width:max-content}
+.ch details ul{margin:.3rem 0 .3rem 1.1rem;padding:0}
+.ch details li{margin:.1rem 0}
+.ch .dl{margin:.25rem 0 0;font-size:.8rem;color:var(--wk-muted)}
+.grp{margin:1rem 0 0;padding:.2rem .4rem;font-size:.78rem;color:var(--wk-muted);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--wk-border-subtle)}
+.how{font-size:.9rem}
+.how li{margin:.25rem 0}
+footer{max-width:60rem;margin:0 auto;padding:1rem;color:var(--wk-muted);font-size:.8rem;text-align:center}
+@media (max-width:560px){h1{font-size:1.45rem}.btn{padding:.3rem .55rem}.btn.main{min-width:5.5rem}.now img{display:none}}
+@media (max-width:360px){.ctrls{gap:.25rem}.btn{min-width:2.3rem;padding:.3rem .4rem;font-size:.85rem}.btn.main{min-width:4.6rem}}
+</style>
+<script>(function(){var d=document.documentElement,t=null;try{t=localStorage.getItem('rcguide-theme')}catch(e){}if(t==='dark'||(t!=='light'&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches))d.setAttribute('data-theme','dark')})();</script>
+</head>
+<body>
+<header class="wk-header">
+  <a class="wk-brand" href="index.html" title="Open the written guide"><svg class="wk-logo" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><radialGradient id="wk-globe-grad" cx="36%" cy="30%" r="75%"><stop offset="0" class="wk-g1"/><stop offset="1" class="wk-g2"/></radialGradient></defs><circle cx="24" cy="24" r="22" fill="url(#wk-globe-grad)"/><g class="wk-gl"><circle cx="24" cy="24" r="22"/><ellipse cx="24" cy="24" rx="8.5" ry="22"/><ellipse cx="24" cy="24" rx="16.5" ry="22"/><path d="M24 2v44M2 24h44M5 13h38M5 35h38"/></g></svg><span class="wk-word"><span class="wk-name">American History</span><span class="wk-motto">The Free Background Guide</span></span></a>
+  <a class="back" href="index.html">← Read the written guide</a>
+</header>
+<div class="page">
+  <h1><span lang="hi">हिंदी ऑडियोबुक</span> <span class="en">· Hindi audiobook</span></h1>
+  <p class="from">The whole guide, retold as stories in Hindi, with names and key terms kept in English. <span id="sum"></span> Voice: Microsoft Madhur (neural).</p>
+
+  <section class="player" aria-label="Audio player">
+    <div class="now">
+      <img src="audio/cover.jpg" alt="">
+      <div class="now-txt">
+        <div class="now-lbl" id="now-lbl">Now playing</div>
+        <div class="now-hi" id="now-hi" lang="hi"></div>
+        <div class="now-en" id="now-en"></div>
+      </div>
+    </div>
+    <audio id="au" controls preload="metadata"></audio>
+    <div class="ctrls">
+      <button class="btn" id="prev" type="button" title="Previous chapter" aria-label="Previous chapter">⏮</button>
+      <button class="btn" id="back" type="button" title="Back 15 seconds" aria-label="Back 15 seconds">« 15s</button>
+      <button class="btn main" id="play" type="button">▶ Play</button>
+      <button class="btn" id="fwd" type="button" title="Forward 30 seconds" aria-label="Forward 30 seconds">30s »</button>
+      <button class="btn" id="next" type="button" title="Next chapter" aria-label="Next chapter">⏭</button>
+    </div>
+  </section>
+
+  <div class="opts">
+    <div class="opt" role="group" aria-label="Playback speed"><b>Speed</b><span id="speeds"></span></div>
+    <div class="opt" role="group" aria-label="Sleep timer"><b>Sleep timer</b><span id="sleeps"></span><span id="sleep-left" class="wk-small"></span></div>
+  </div>
+  <p class="note" id="note" aria-live="polite"></p>
+
+  <h2>Chapters</h2>
+  <div class="prog"><span id="prog"></span><button type="button" id="reset">Reset progress</button></div>
+  <ol class="chs" id="list"></ol>
+
+  <h2>How to listen</h2>
+  <ul class="how">
+    <li>Start with the six Foundations (chapters 1 to 6); every later chapter builds on them.</li>
+    <li>Each reading follows the same pattern: <span lang="hi">“पहले, इस लेख का सार”</span> (what the reading says), <span lang="hi">“अब इसके पीछे की कहानी”</span> (the background story), <span lang="hi">“याद रखने का तरीका”</span> (a memory hook), <span lang="hi">“कुछ ज़रूरी शब्द”</span> (key words) and <span lang="hi">“पढ़ते समय ध्यान रखें”</span> (a reading tip).</li>
+    <li>This page remembers your chapter, position and speed on this device, and moves to the next chapter by itself. Lock-screen and headphone controls work on phones.</li>
+    <li>Open a chapter’s <i>Contents</i> to jump to the matching cards in the written guide (opens in a new tab, so the audio keeps playing), or to download the MP3 for offline listening.</li>
+    <li>Keyboard: Space = play or pause, ← = back 15 seconds, → = forward 30 seconds.</li>
+  </ul>
+</div>
+<footer>American History &amp; Society — Hindi audiobook · narration generated with a Microsoft neural voice</footer>
+<script>
+(function(){
+'use strict';
+var CH = [{"n":0,"hi":"यह audiobook कैसे सुनें","en":"Introduction: how this audiobook works","file":"audio/00_Introduction.mp3","dur":363.3,"anchor":"start","mb":2.2,"items":[{"t":"How the book is organised, how each reading is narrated, and listening tips","a":null}]},{"n":1,"hi":"Foundation 1: अमेरिका की कहानी","en":"Foundation 1 · The story of America","file":"audio/01_Foundation_1_Story_of_America.mp3","dur":2014.0,"anchor":"f-timeline","mb":12.1,"items":[{"t":"Foundation 1 · The story of America","a":"f-timeline"},{"t":"Chapter 1 · The first Americans (before 1492)","a":null},{"t":"Chapter 2 · Europeans arrive (1492–1700)","a":null},{"t":"Chapter 3 · Taxes, tea and a new country (1754–1791)","a":null},{"t":"Chapter 4 · A young country grows (1803–1848)","a":null},{"t":"Chapter 5 · The road to civil war (1850s)","a":null},{"t":"Chapter 6 · Civil War and Reconstruction (1861–1877)","a":null},{"t":"Chapter 7 · Railroads, factories and Jim Crow (1877–1900)","a":null},{"t":"Chapter 8 · Reformers, the vote and World War I (1890–1920)","a":null},{"t":"Chapter 9 · Boom, bust and war (1920–1945)","a":null},{"t":"Chapter 10 · Cold War and civil rights (1945–1968)","a":null},{"t":"Chapter 11 · New voices, new fields (1960s–1970s)","a":null},{"t":"Chapter 12 · Modern America (1980–today)","a":null}]},{"n":2,"hi":"Foundation 2: अमेरिका की सरकार और क़ानून","en":"Foundation 2 · How US government & law work","file":"audio/02_Foundation_2_Government_and_Law.mp3","dur":1012.9,"anchor":"f-govt","mb":6.1,"items":[{"t":"Foundation 2 · How US government & law work","a":"f-govt"},{"t":"Chapter 1 · One country, fifty states","a":null},{"t":"Chapter 2 · Three branches that check each other","a":null},{"t":"Chapter 3 · Changing the rulebook: freedom and the end of slavery","a":null},{"t":"Chapter 4 · Drink, votes and a promise that failed","a":null},{"t":"Chapter 5 · The parties: a confusing history","a":null},{"t":"Words to know","a":null}]},{"n":3,"hi":"Foundation 3: Supreme Court के बड़े cases","en":"Foundation 3 · Supreme Court cases that changed America","file":"audio/03_Foundation_3_Supreme_Court.mp3","dur":831.0,"anchor":"f-scotus","mb":5.0,"items":[{"t":"Foundation 3 · Supreme Court cases that changed America","a":"f-scotus"},{"t":"Chapter 1 · The power to strike down laws","a":null},{"t":"Chapter 2 · Race and equality","a":null},{"t":"Chapter 3 · Women and the family","a":null},{"t":"Chapter 4 · Native nations and the Court","a":null}]},{"n":4,"hi":"Foundation 4: isms और feminism की लहरें","en":"Foundation 4 · The “isms” & feminism’s waves","file":"audio/04_Foundation_4_Isms_and_Feminism.mp3","dur":1959.0,"anchor":"f-isms","mb":11.8,"items":[{"t":"Foundation 4 · The “isms” & feminism’s waves","a":"f-isms"},{"t":"Chapter 1 · Free people and free markets (1776)","a":null},{"t":"Chapter 2 · Sharing the wealth: socialism and Marx (1848–1867)","a":null},{"t":"Chapter 3 · “Survival of the fittest” misused (after 1859)","a":null},{"t":"Chapter 4 · Communism in power and the Cold War (1917–1991)","a":null},{"t":"Chapter 5 · Two tricky American words: “liberal” and “republic”","a":null},{"t":"Chapter 6 · The self-made man and the family self","a":null},{"t":"Chapter 7 · The wife who disappeared in law: coverture","a":null},{"t":"Chapter 8 · Mothers of the republic and the “true woman”","a":null},{"t":"Chapter 9 · The first wave: winning the vote (1848–1920)","a":null},{"t":"Chapter 10 · Between the waves (1920–1960)","a":null},{"t":"Chapter 11 · The second wave (1960s–80s)","a":null},{"t":"Chapter 12 · The third and fourth waves (1990s–today)","a":null},{"t":"Chapter 13 · Same or different? A question that keeps coming back","a":null},{"t":"Words to know","a":null}]},{"n":5,"hi":"Foundation 5: इतिहासकार बहस कैसे करते हैं","en":"Foundation 5 · How historians argue","file":"audio/05_Foundation_5_How_Historians_Argue.mp3","dur":1236.5,"anchor":"f-histo","mb":7.5,"items":[{"t":"Foundation 5 · How historians argue (the hidden grammar of history writing)","a":"f-histo"},{"t":"Chapter 1 · Two kinds of evidence","a":null},{"t":"Chapter 2 · Old view, new view, blended view","a":null},{"t":"Chapter 3 · History from below (1960s–70s)","a":null},{"t":"Chapter 4 · Two more ways into the past","a":null},{"t":"Chapter 5 · Two big ideas: agency and ideology","a":null},{"t":"Chapter 6 · Time, culture and eras","a":null},{"t":"Chapter 7 · Six shapes of argument, part one","a":null},{"t":"Chapter 8 · Six shapes of argument, part two","a":null},{"t":"Chapter 9 · Reading the tone","a":null},{"t":"Words to know","a":null}]},{"n":6,"hi":"Foundation 6: स्कूल science का toolkit","en":"Foundation 6 · School-science toolkit","file":"audio/06_Foundation_6_Science_Toolkit.mp3","dur":1825.5,"anchor":"f-science","mb":11.0,"items":[{"t":"Foundation 6 · School-science toolkit","a":"f-science"},{"t":"Chapter 1 · The detective’s method","a":null},{"t":"Chapter 2 · When clues mislead","a":null},{"t":"Chapter 3 · The cell and its recipe book","a":null},{"t":"Chapter 4 · Evolution by natural selection (1859)","a":null},{"t":"Chapter 5 · Who eats whom, and who keeps warm","a":null},{"t":"Chapter 6 · A train through deep time (4.54 billion–150 million years ago)","a":null},{"t":"Chapter 7 · The train reaches our time (66 million years ago–today)","a":null},{"t":"Chapter 8 · Locks and keys in the brain","a":null},{"t":"Chapter 9 · Gravity and light (1687–1915)","a":null},{"t":"Chapter 10 · A journey out into space","a":null},{"t":"Chapter 11 · Inside the atom","a":null},{"t":"Words to know","a":null}]},{"n":7,"hi":"महिलाएँ और feminism, भाग 1","en":"Women & feminism, part 1 · topic intro, p.4–10","file":"audio/07_Women_1.mp3","dur":2682.2,"anchor":"t1","mb":16.1,"items":[{"t":"Topic 1 · Women / Feminism","a":"t1"},{"t":"p.4 · Women’s oral narratives as historical evidence","a":"p004"},{"t":"p.5 · Women’s suffrage and the 1920s","a":"p005"},{"t":"p.6 · Antebellum Virginia women and party politics","a":"p006"},{"t":"p.7 · The cult of female domesticity & the ideology of “female benevolence”","a":"p007"},{"t":"p.8 · “Relational” vs “individualist” feminism","a":"p008"},{"t":"p.9 · Florentine textile workers, human capital theory & “overcrowding”","a":"p009"},{"t":"p.10 · Sarah Eisenstein: working women’s consciousness, 1890–WWI","a":"p010"}]},{"n":8,"hi":"महिलाएँ और feminism, भाग 2","en":"Women & feminism, part 2 · p.11–17","file":"audio/08_Women_2.mp3","dur":2267.9,"anchor":"t1","mb":13.6,"items":[{"t":"p.11 · Female service workers & the persistence of sex segregation at work","a":"p011"},{"t":"p.12 · The 19th-century US census and women’s occupations","a":"p012"},{"t":"p.13 · Latin American women & urban migration","a":"p013"},{"t":"p.14 · Women in CIO industrial unions (Faue & Gabin)","a":"p014"},{"t":"p.15 · Women and social class","a":"p015"},{"t":"p.16 · Aztec women’s production: weaving & cooking","a":"p016"},{"t":"p.17 · History becomes a “scientific” discipline","a":"p017"}]},{"n":9,"hi":"महिलाएँ और feminism, भाग 3","en":"Women & feminism, part 3 · p.18–24","file":"audio/09_Women_3.mp3","dur":2699.0,"anchor":"t1","mb":16.2,"items":[{"t":"p.18 · Eleanor Roosevelt (1884–1962)","a":"p018"},{"t":"p.19 · Colonial Connecticut women in court (Cornelia Dayton)","a":"p019"},{"t":"p.20 · The 1917 New York food boycott & the Socialist Party","a":"p020"},{"t":"p.21 · Quaker schools & unmarried women in colonial Philadelphia (Wulf)","a":"p021"},{"t":"p.22 · Alessandra Strozzi & the Western idea of the “individual”","a":"p022"},{"t":"p.23 · Did women have a Renaissance? Burckhardt vs Joan Kelly vs recent scholars","a":"p023"},{"t":"p.24 · “Republican motherhood” (Linda Kerber) and Thomas Woody","a":"p024"}]},{"n":10,"hi":"महिलाएँ और feminism, भाग 4","en":"Women & feminism, part 4 · p.25–31","file":"audio/10_Women_4.mp3","dur":2683.8,"anchor":"t1","mb":16.1,"items":[{"t":"p.25 · 17th-century English women and the English Civil Wars","a":"p025"},{"t":"p.26 · Progressive Era reformers and child labour","a":"p026"},{"t":"p.27 · English farmhouse cheese-making & the “decline thesis”","a":"p027"},{"t":"p.28 · Antonia Castañeda: Californianas, property law & Anglo novels","a":"p028"},{"t":"p.29 · Women and the “new political history” (Paula Baker)","a":"p029"},{"t":"p.30 · “Bourgeois” vs “socialist” feminism in late-tsarist Russia","a":"p030"},{"t":"p.31 · Ewha’s 1977 women’s studies program & the Korean critique of Freud","a":"p031"}]},{"n":11,"hi":"Native Americans, भाग 1","en":"Native Americans, part 1 · topic intro, p.33–35","file":"audio/11_Native_Americans_1.mp3","dur":2058.0,"anchor":"t2","mb":12.4,"items":[{"t":"Topic 2 · Native Americans","a":"t2"},{"t":"First peoples and first contact (up to 1492)","a":null},{"t":"Nations, treaties and removal (1787–1840s)","a":null},{"t":"Reservations, allotment and the courts (1850s–1908)","a":null},{"t":"From the Indian New Deal to Red Power (1924–1975)","a":null},{"t":"Tribes today, and what to call them","a":null},{"t":"p.33 · Indian water rights: the Winters doctrine & the Rio Grande pueblos","a":"p033"},{"t":"p.34 · Recording Native American life stories (Boas, Radin)","a":"p034"},{"t":"p.35 · Lone Wolf v. Hitchcock (1903) and federal Indian policy","a":"p035"}]},{"n":12,"hi":"Native Americans, भाग 2","en":"Native Americans, part 2 · p.36–40","file":"audio/12_Native_Americans_2.mp3","dur":1786.1,"anchor":"t2","mb":10.8,"items":[{"t":"p.36 · Maps of Native American lands & the BIA’s record","a":"p036"},{"t":"p.37 · Ethnocentric textbook portrayals of Native Americans","a":"p037"},{"t":"p.38 · The earliest fur trade: Newfoundland fishing crews","a":"p038"},{"t":"p.39 · Hopi cultural persistence, 1680–1880","a":"p039"},{"t":"p.40 · The Inca “vertical archipelago”","a":"p040"}]},{"n":13,"hi":"Native Americans, भाग 3","en":"Native Americans, part 3 · p.41–44","file":"audio/13_Native_Americans_3.mp3","dur":1645.6,"anchor":"t2","mb":9.9,"items":[{"t":"p.41 · Algonquian family hunting territories","a":"p041"},{"t":"p.42 · Hierarchy in 14th–15th-century Western Pueblo settlements","a":"p042"},{"t":"p.43 · Did Paleo-Indians kill off the Ice Age megafauna? (Martin vs Krech vs White)","a":"p043"},{"t":"p.44 · What is ethnicity? Primordial vs interest-group vs process","a":"p044"}]},{"n":14,"hi":"African Americans, भाग 1","en":"African Americans, part 1 · topic intro, p.46–49","file":"audio/14_African_Americans_1.mp3","dur":2537.8,"anchor":"t3","mb":15.3,"items":[{"t":"Topic 3 · African Americans","a":"t3"},{"t":"From slavery to freedom (1619–1877)","a":null},{"t":"Jim Crow and the first answers (1877–1909)","a":null},{"t":"Moving north and organising (1910–1941)","a":null},{"t":"War and the civil rights movement (1941–1968)","a":null},{"t":"A note on words","a":null},{"t":"p.46 · Who joined the Great Migration?","a":"p046"},{"t":"p.47 · C. Vann Woodward’s The Strange Career of Jim Crow","a":"p047"},{"t":"p.48 · Du Bois’s 1918 “Close Ranks” editorial","a":"p048"},{"t":"p.49 · A. Philip Randolph & the Brotherhood of Sleeping Car Porters","a":"p049"}]},{"n":15,"hi":"African Americans, भाग 2","en":"African Americans, part 2 · p.50–53","file":"audio/15_African_Americans_2.mp3","dur":1555.4,"anchor":"t3","mb":9.4,"items":[{"t":"p.50 · Marcus Garvey & Wallace’s “revitalization movements”","a":"p050"},{"t":"p.51 · Southern Black industrial workers & unions, 1930s–40s","a":"p051"},{"t":"p.52 · Unions and Black workers in WWII","a":"p052"},{"t":"p.53 · Glatthaar’s Forged in Battle: Black soldiers & white officers in the Civil War","a":"p053"}]},{"n":16,"hi":"Minorities और Latin America","en":"Other minorities & Latin America · topic intro, p.55–57","file":"audio/16_Minorities_and_Latin_America.mp3","dur":1647.1,"anchor":"t4","mb":9.9,"items":[{"t":"Topic 4 · Minorities (Black, Native, Asian, Hispanic) & Latin America","a":"t4"},{"t":"Who’s who: the census and Hispanic Americans","a":null},{"t":"Asian Americans: from the railroad to the campus","a":null},{"t":"Affirmative action and help for minority businesses","a":null},{"t":"p.55 · Aiding minority businesses: SBA loans and a newer approach","a":"p055"},{"t":"p.56 · Teaching introductory Asian American studies","a":"p056"},{"t":"p.57 · The Great Depression in Latin America","a":"p057"}]},{"n":17,"hi":"Brain, यानी दिमाग़, भाग 1","en":"Brain, part 1 · topic intro, p.59–61","file":"audio/17_Brain_1.mp3","dur":1837.8,"anchor":"t5","mb":11.1,"items":[{"t":"Topic 5 · Brain","a":"t5"},{"t":"How neurons talk","a":null},{"t":"Brain map & the main chemicals","a":null},{"t":"Why rats and mice?","a":null},{"t":"p.59 · Food → tryptophan → serotonin: diet changes brain chemistry","a":"p059"},{"t":"p.60 · How caffeine works: blocking adenosine receptors","a":"p060"},{"t":"p.61 · Searle vs the brain-as-computer metaphor","a":"p061"}]},{"n":18,"hi":"Brain, यानी दिमाग़, भाग 2","en":"Brain, part 2 · p.62–63","file":"audio/18_Brain_2.mp3","dur":920.3,"anchor":"t5","mb":5.6,"items":[{"t":"p.62 · Body clocks and the suprachiasmatic nuclei (SCNs)","a":"p062"},{"t":"p.63 · Episodic memory and Clayton’s scrub-jay experiment","a":"p063"}]},{"n":19,"hi":"Astronomy, भाग 1","en":"Astronomy, part 1 · topic intro, p.65–66","file":"audio/19_Astronomy_1.mp3","dur":1658.8,"anchor":"t6","mb":10.0,"items":[{"t":"Topic 6 · Astronomy / Stars / Galaxies / Black Holes / Meteors / Asteroids","a":"t6"},{"t":"How astronomers know things: clues in the light","a":null},{"t":"More clues: gravity, craters and computers","a":null},{"t":"The object map, part 1: from dust to planets","a":null},{"t":"The object map, part 2: stars, clusters and galaxies","a":null},{"t":"A century of discoveries, to date the readings (1915–2021)","a":null},{"t":"p.65 · “Weighing” double stars","a":"p065"},{"t":"p.66 · The Mars meteorite ALH84001","a":"p066"}]},{"n":20,"hi":"Astronomy, भाग 2","en":"Astronomy, part 2 · p.67–69","file":"audio/20_Astronomy_2.mp3","dur":1341.7,"anchor":"t6","mb":8.1,"items":[{"t":"p.67 · Milankovitch: did Earth’s orbit cause the ice ages?","a":"p067"},{"t":"p.68 · The “missing matter”: will the universe stop expanding?","a":"p068"},{"t":"p.69 · Meteor streams as hollow pipes: the Geminid model","a":"p069"}]},{"n":21,"hi":"Astronomy, भाग 3","en":"Astronomy, part 3 · p.70–72","file":"audio/21_Astronomy_3.mp3","dur":1245.0,"anchor":"t6","mb":7.5,"items":[{"t":"p.70 · Globular cluster ages & how the Milky Way formed","a":"p070"},{"t":"p.71 · Low-surface-brightness galaxies & the missing baryons","a":"p071"},{"t":"p.72 · Are asteroids solid rocks or rubble piles?","a":"p072"}]},{"n":22,"hi":"Astronomy, भाग 4","en":"Astronomy, part 4 · p.73–75","file":"audio/22_Astronomy_4.mp3","dur":1332.3,"anchor":"t6","mb":8.0,"items":[{"t":"p.73 · Black holes in M87 and NGC 4258: proof by density","a":"p073"},{"t":"p.74 · Moon basins with “wrong” gravity: Clementine data","a":"p074"},{"t":"p.75 · Jupiter’s four largest moons","a":"p075"}]},{"n":23,"hi":"Astronomy, भाग 5","en":"Astronomy, part 5 · p.76–77","file":"audio/23_Astronomy_5.mp3","dur":990.8,"anchor":"t6","mb":6.0,"items":[{"t":"p.76 · Hunting MACHOs with microlensing","a":"p076"},{"t":"p.77 · Quantum tunnelling: faster than light?","a":"p077"}]},{"n":24,"hi":"Evolution और जानवरों का व्यवहार, भाग 1","en":"Evolution & behaviour, part 1 · topic intro, p.79–80","file":"audio/24_Evolution_1.mp3","dur":2170.1,"anchor":"t7","mb":13.1,"items":[{"t":"Topic 7 · Biological Evolution / Animal & Human Evolution / Animal Behaviour / Fossils","a":"t7"},{"t":"Darwin’s big idea: natural selection","a":null},{"t":"Deep time: the history of Earth as one calendar year","a":null},{"t":"Birds, dinosaurs and the gaps in the rocks","a":null},{"t":"Watching animals: how, why and how clever?","a":null},{"t":"Who eats whom: ecology","a":null},{"t":"A biology timeline, to date the readings (1859–2003)","a":null},{"t":"p.79 · Origins of bird flight: the “trees-down” and “ground-up” hypotheses","a":"p079"},{"t":"p.80 · Birds and theropod dinosaurs","a":"p080"}]},{"n":25,"hi":"Evolution और जानवरों का व्यवहार, भाग 2","en":"Evolution & behaviour, part 2 · p.81–83","file":"audio/25_Evolution_2.mp3","dur":1542.1,"anchor":"t7","mb":9.3,"items":[{"t":"p.81 · Dinosaur bone tissue","a":"p081"},{"t":"p.82 · Broken teeth at the La Brea tar pits","a":"p082"},{"t":"p.83 · What did australopithecines eat? Tooth micro-wear","a":"p083"}]},{"n":26,"hi":"Evolution और जानवरों का व्यवहार, भाग 3","en":"Evolution & behaviour, part 3 · p.84–86","file":"audio/26_Evolution_3.mp3","dur":1617.1,"anchor":"t7","mb":9.7,"items":[{"t":"p.84 · Conodonts and the origin of the vertebrate skeleton","a":"p084"},{"t":"p.85 · Keystone species","a":"p085"},{"t":"p.86 · Species, interbreeding and hybrids","a":"p086"}]},{"n":27,"hi":"Evolution और जानवरों का व्यवहार, भाग 4","en":"Evolution & behaviour, part 4 · p.87–89","file":"audio/27_Evolution_4.mp3","dur":1428.2,"anchor":"t7","mb":8.6,"items":[{"t":"p.87 · What counts as a “behavioural gene”?","a":"p087"},{"t":"p.88 · Social learning of food preferences","a":"p088"},{"t":"p.89 · Prokaryotes and eukaryotes","a":"p089"}]},{"n":28,"hi":"Evolution और जानवरों का व्यवहार, भाग 5","en":"Evolution & behaviour, part 5 · p.90–92","file":"audio/28_Evolution_5.mp3","dur":1453.5,"anchor":"t7","mb":8.8,"items":[{"t":"p.90 · Polio and the causes of epidemics","a":"p090"},{"t":"p.91 · The “amphibian crisis”","a":"p091"},{"t":"p.92 · Anole lizards of the Caribbean","a":"p092"}]},{"n":29,"hi":"Evolution और जानवरों का व्यवहार, भाग 6","en":"Evolution & behaviour, part 6 · p.93–95","file":"audio/29_Evolution_6.mp3","dur":1400.5,"anchor":"t7","mb":8.4,"items":[{"t":"p.93 · Sloth bears carrying their cubs","a":"p093"},{"t":"p.94 · Maternal strategies of seals","a":"p094"},{"t":"p.95 · “Commuter” diatoms and their tidal clock","a":"p095"}]},{"n":30,"hi":"Evolution और जानवरों का व्यवहार, भाग 7","en":"Evolution & behaviour, part 7 · p.96–98","file":"audio/30_Evolution_7.mp3","dur":1530.4,"anchor":"t7","mb":9.2,"items":[{"t":"p.96 · Moth and butterfly population cycles","a":"p096"},{"t":"p.97 · Biological pest control (biocontrol)","a":"p097"},{"t":"p.98 · Salmon habitat loss and genetic diversity","a":"p098"}]},{"n":31,"hi":"Evolution और जानवरों का व्यवहार, भाग 8","en":"Evolution & behaviour, part 8 · p.99–100","file":"audio/31_Evolution_8.mp3","dur":1010.5,"anchor":"t7","mb":6.1,"items":[{"t":"p.99 · Removing duck-nest predators: what happens to songbirds?","a":"p099"},{"t":"p.100 · Bright colours and mate choice: why carotenoids matter","a":"p100"}]},{"n":32,"hi":"Primer 1 और 2: अमेरिकी economy, और धर्म के सामने चुनौतियाँ","en":"Primers 8.1–8.2 · Economy & finance; challenges to religion","file":"audio/32_Primers_1_2_Economy_and_Religion.mp3","dur":1781.5,"anchor":"t8","mb":10.7,"items":[{"t":"Topic 8 · Other recurring themes","a":"t8"},{"t":"Primer 8.1 · American economy, finance & capital markets","a":"x-econ"},{"t":"Primer 8.2 · Challenges to religion: science, secularism & the courts","a":"x-religion"}]},{"n":33,"hi":"Primer 3: अमेरिका superpower कैसे बना","en":"Primer 8.3 · American dominance","file":"audio/33_Primer_3_American_Dominance.mp3","dur":1277.8,"anchor":"x-power","mb":7.7,"items":[{"t":"Primer 8.3 · American dominance: how the US became a superpower","a":"x-power"}]},{"n":34,"hi":"Primer 4: capitalism, communism और Cold War","en":"Primer 8.4 · Capitalism, communism, socialism & the Cold War","file":"audio/34_Primer_4_Capitalism_Communism_Cold_War.mp3","dur":1183.7,"anchor":"x-cold","mb":7.1,"items":[{"t":"Primer 8.4 · Capitalism, communism, socialism & the Cold War","a":"x-cold"}]},{"n":35,"hi":"Primer 5: नई technology","en":"Primer 8.5 · Latest technology: AI, chips, biotech, space & energy","file":"audio/35_Primer_5_Latest_Technology.mp3","dur":1392.2,"anchor":"x-tech","mb":8.4,"items":[{"t":"Primer 8.5 · Latest technology: AI, chips, biotech, space & energy","a":"x-tech"}]},{"n":36,"hi":"Primer 6: cell biology और genetics","en":"Primer 8.6 · Cell biology & genetics","file":"audio/36_Primer_6_Cell_Biology_and_Genetics.mp3","dur":1190.6,"anchor":"x-cell","mb":7.2,"items":[{"t":"Primer 8.6 · Cell biology & genetics: high-school biology in one card","a":"x-cell"}]}];
+var KEY = 'ahr-audio-pos-v1', DONE = 'ahr-audio-done-v1', RATE = 'ahr-audio-rate-v1';
+var SPEEDS = [0.8, 0.9, 1, 1.1, 1.25, 1.5, 1.75, 2];
+var GROUPS = {0: 'Start here', 1: 'Foundations', 7: 'Topic 1 · Women & feminism', 11: 'Topic 2 · Native Americans', 14: 'Topic 3 · African Americans', 16: 'Topic 4 · Other minorities & Latin America', 17: 'Topic 5 · Brain', 19: 'Topic 6 · Astronomy', 24: 'Topic 7 · Evolution, behaviour & ecology', 32: 'Topic 8 · Primers'};
+var $ = function (s) { return document.getElementById(s); };
+var au = $('au');
+var cur = 0, pendingSeek = 0, lastSave = 0, sleepTimer = null, sleepUntil = 0, sleepEnd = false;
+
+function get(k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
+function put(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]; }); }
+function fmt(s) {
+  s = Math.max(0, Math.round(s || 0));
+  var h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60;
+  return (h ? h + ':' + String(m).padStart(2, '0') : m) + ':' + String(x).padStart(2, '0');
+}
+function hm(s) { var h = Math.floor(s / 3600), m = Math.round(s % 3600 / 60); return (h ? h + ' h ' : '') + m + ' min'; }
+function label(c) { return c.n ? 'अध्याय ' + c.n : 'परिचय'; }
+var rate = get(RATE, 1);
+if (SPEEDS.indexOf(rate) < 0) rate = 1;
+var done = get(DONE, []);
+
+// ---- chapter list ----
+var total = CH.reduce(function (a, c) { return a + c.dur; }, 0);
+$('sum').textContent = CH.length + ' chapters · ' + hm(total) + '.';
+var html = '';
+CH.forEach(function (c, i) {
+  if (GROUPS[c.n] !== undefined) html += '<li class="grp" aria-hidden="true">' + esc(GROUPS[c.n]) + '</li>';
+  var items = c.items.map(function (it) {
+    return '<li>' + (it.a ? '<a href="index.html#' + it.a + '" target="_blank" rel="noopener">' + esc(it.t) + '</a>' : esc(it.t)) + '</li>';
+  }).join('');
+  html += '<li class="ch" id="ch' + c.n + '" data-i="' + i + '">' +
+    '<button class="pb" type="button" data-i="' + i + '" aria-label="Play ' + esc(label(c)) + '">▶</button>' +
+    '<div class="m"><div class="hi" lang="hi"><span class="num">' + esc(label(c)) + ' ·</span> ' + esc(c.hi) + '</div>' +
+    '<div class="en">' + esc(c.en) + '</div>' +
+    '<details><summary>Contents</summary><ul>' + items + '</ul>' +
+    '<p class="dl"><a href="' + esc(c.file) + '" download>Download MP3</a> · ' + c.mb + ' MB</p></details></div>' +
+    '<div class="r"><span class="dur">' + fmt(c.dur) + '</span><span class="tick" title="Finished"></span></div></li>';
+});
+$('list').innerHTML = html;
+$('list').addEventListener('click', function (e) {
+  var b = e.target.closest('.pb');
+  if (!b) return;
+  var i = +b.getAttribute('data-i');
+  if (i === cur && !au.paused) { au.pause(); return; }
+  if (i === cur) { au.play().catch(function () {}); return; }
+  load(i, true, 0);
+});
+
+function paintDone() {
+  CH.forEach(function (c) {
+    var li = $('ch' + c.n);
+    if (li) li.querySelector('.tick').textContent = done.indexOf(c.n) >= 0 ? '✓ heard' : '';
+  });
+  var n = CH.filter(function (c) { return done.indexOf(c.n) >= 0; }).length;
+  $('prog').textContent = n + ' of ' + CH.length + ' chapters finished';
+}
+function markDone(c) { if (done.indexOf(c.n) < 0) { done.push(c.n); put(DONE, done); paintDone(); } }
+$('reset').addEventListener('click', function () {
+  if (!confirm('Clear the “heard” marks and the saved position?')) return;
+  done = []; put(DONE, done); paintDone(); load(0, false, 0); save();
+});
+
+// ---- speed and sleep timer ----
+function chips(box, list, cb) {
+  $(box).innerHTML = list.map(function (o) { return '<button type="button" class="chip" data-v="' + o[0] + '" aria-pressed="false">' + o[1] + '</button>'; }).join(' ');
+  $(box).addEventListener('click', function (e) { var b = e.target.closest('.chip'); if (b) cb(b.getAttribute('data-v')); });
+}
+function press(box, v) { [].forEach.call($(box).querySelectorAll('.chip'), function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-v') === String(v))); }); }
+chips('speeds', SPEEDS.map(function (s) { return [s, s + '×']; }), function (v) { setRate(+v); });
+function setRate(r) { rate = r; au.defaultPlaybackRate = r; au.playbackRate = r; put(RATE, r); press('speeds', r); }
+chips('sleeps', [['0', 'Off'], ['15', '15 min'], ['30', '30 min'], ['60', '60 min'], ['end', 'End of chapter']], setSleep);
+function setSleep(v) {
+  clearTimeout(sleepTimer); sleepTimer = null; sleepUntil = 0; sleepEnd = false;
+  if (v === 'end') sleepEnd = true;
+  else if (+v > 0) { sleepUntil = Date.now() + v * 60000; sleepTimer = setTimeout(function () { au.pause(); setSleep('0'); }, v * 60000); }
+  press('sleeps', v); paintSleep();
+}
+function paintSleep() { $('sleep-left').textContent = sleepUntil ? ' ' + Math.max(1, Math.ceil((sleepUntil - Date.now()) / 60000)) + ' min left' : ''; }
+setInterval(paintSleep, 20000);
+
+// ---- player ----
+function save() { if (CH[cur]) put(KEY, {n: CH[cur].n, t: Math.floor(au.currentTime || pendingSeek || 0)}); }
+function load(i, play, t) {
+  if (i < 0 || i >= CH.length) return;
+  cur = i;
+  var c = CH[i];
+  pendingSeek = t || 0;
+  au.src = c.file;
+  au.defaultPlaybackRate = rate; au.playbackRate = rate;
+  $('now-hi').textContent = label(c) + ' · ' + c.hi;
+  $('now-en').textContent = c.en;
+  document.title = label(c) + ' · ' + c.hi + ' — हिंदी ऑडियोबुक';
+  [].forEach.call(document.querySelectorAll('.ch'), function (li) {
+    var on = li.id === 'ch' + c.n;
+    li.classList.toggle('cur', on);
+    if (on) li.setAttribute('aria-current', 'true'); else li.removeAttribute('aria-current');
+  });
+  if ('mediaSession' in navigator && window.MediaMetadata) {
+    navigator.mediaSession.metadata = new MediaMetadata({title: label(c) + ' · ' + c.hi, artist: 'American History & Society',
+      album: 'हिंदी ऑडियोबुक', artwork: [{src: 'audio/cover.jpg', sizes: '600x600', type: 'image/jpeg'}]});
+  }
+  save();
+  if (play) au.play().catch(function () {});
+}
+au.addEventListener('loadedmetadata', function () {
+  if (pendingSeek) { try { au.currentTime = Math.min(pendingSeek, Math.max(0, au.duration - 2)); } catch (e) {} pendingSeek = 0; }
+  au.playbackRate = rate;
+});
+au.addEventListener('play', function () { au.playbackRate = rate; paintPlay(); });
+au.addEventListener('pause', function () { paintPlay(); save(); });
+au.addEventListener('timeupdate', function () {
+  var now = Date.now();
+  if (now - lastSave > 4000) {
+    lastSave = now; save();
+    if ('mediaSession' in navigator && navigator.mediaSession.setPositionState && isFinite(au.duration)) {
+      try { navigator.mediaSession.setPositionState({duration: au.duration, playbackRate: au.playbackRate, position: Math.min(au.currentTime, au.duration)}); } catch (e) {}
+    }
+  }
+});
+au.addEventListener('ended', function () {
+  markDone(CH[cur]);
+  if (sleepEnd) { setSleep('0'); if (cur < CH.length - 1) load(cur + 1, false, 0); return; }
+  if (cur < CH.length - 1) load(cur + 1, true, 0); else { pendingSeek = 0; save(); }
+});
+function paintPlay() { $('play').textContent = au.paused ? '▶ Play' : '❚❚ Pause'; $('now-lbl').textContent = au.paused ? 'Paused' : 'Now playing'; }
+function toggle() { if (au.paused) au.play().catch(function () {}); else au.pause(); }
+function skip(s) {
+  if (!isFinite(au.duration)) { pendingSeek = Math.max(0, pendingSeek + s); return; }
+  au.currentTime = Math.max(0, Math.min(au.duration - 0.5, au.currentTime + s)); save();
+}
+function prev() { if (au.currentTime > 5 || cur === 0) { au.currentTime = 0; } else load(cur - 1, !au.paused, 0); }
+function next() { if (cur < CH.length - 1) load(cur + 1, !au.paused, 0); }
+$('play').addEventListener('click', toggle);
+$('back').addEventListener('click', function () { skip(-15); });
+$('fwd').addEventListener('click', function () { skip(30); });
+$('prev').addEventListener('click', prev);
+$('next').addEventListener('click', next);
+document.addEventListener('keydown', function (e) {
+  if (e.altKey || e.ctrlKey || e.metaKey) return;
+  var t = e.target, tag = t && t.tagName;
+  if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'BUTTON' || tag === 'SUMMARY' || tag === 'A' || tag === 'AUDIO') return;
+  if (e.key === ' ' || e.key === 'k') { e.preventDefault(); toggle(); }
+  else if (e.key === 'ArrowLeft') { e.preventDefault(); skip(-15); }
+  else if (e.key === 'ArrowRight') { e.preventDefault(); skip(30); }
+});
+if ('mediaSession' in navigator) {
+  var h = {play: function () { au.play(); }, pause: function () { au.pause(); }, previoustrack: prev, nexttrack: next,
+    seekbackward: function (d) { skip(-((d && d.seekOffset) || 15)); }, seekforward: function (d) { skip((d && d.seekOffset) || 30); },
+    seekto: function (d) { if (d && d.seekTime != null) { au.currentTime = d.seekTime; save(); } }};
+  Object.keys(h).forEach(function (k) { try { navigator.mediaSession.setActionHandler(k, h[k]); } catch (e) {} });
+}
+window.addEventListener('pagehide', save);
+
+// ---- start: resume where the listener stopped ----
+setRate(rate); setSleep('0'); paintDone(); paintPlay();
+var pos = get(KEY, null), start = 0;
+if (pos) CH.forEach(function (c, i) { if (c.n === pos.n) start = i; });
+if (CH.length) {
+  load(start, false, pos ? pos.t : 0);
+  if (pos && (pos.t > 5 || start > 0)) $('note').textContent = 'Welcome back. Press Play to continue ' + label(CH[start]) + ' (' + CH[start].en + ') from ' + fmt(pos.t) + '.';
+}
+})();
+</script>
+</body>
+</html>
